@@ -194,3 +194,8 @@ def player_stats(player_name)
       player[:player_name] == player_name
     }.select{ |k, v| k.to_s != "player_name"}
 end
+
+game_hash.map{ |k, v|
+  v[:players]}.flatten.find{ |player|
+    player[:player_name] == player_name
+  }.select{ |k, v| k.to_s != "player_name"}

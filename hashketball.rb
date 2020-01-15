@@ -210,5 +210,5 @@ def winning_team
 end
 
 def player_with_longest_name
- game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:shoe] }[:name]
+ game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:name].length }[:name]
 end

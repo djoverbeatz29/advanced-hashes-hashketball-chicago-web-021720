@@ -199,6 +199,6 @@ def big_shoe_rebounds
  game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:shoe] }[:rebounds]
 end
 
-def big_shoe_rebounds
+def most_points_scored
  game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:points] }[:player_name]
 end

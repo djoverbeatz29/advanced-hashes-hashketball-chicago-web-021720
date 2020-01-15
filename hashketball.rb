@@ -206,5 +206,5 @@ end
 def winning_team
   names = game_hash.map{ |k, v| v[:team_name] }
   total_scores = game_hash.map{ |k, v| v[:players].sum{ |p| p[:points] }}
-  names[total_scores.max_with_index.max[1]]
+  names[total_scores.each_with_index.max[1]]
 end

@@ -193,6 +193,6 @@ def player_stats(player_name)
     v[:players].find { |player|
       player[:player_name] == player_name
     }
-  }[0]
+  }[0].select{ |k, v| k.to_s != "player_name"}
   
 end

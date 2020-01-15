@@ -195,4 +195,6 @@ def player_stats(player_name)
     }.select{ |k, v| k.to_s != "player_name"}
 end
 
-game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:shoe] }
+def big_shoe_rebounds
+ game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:shoe] }[:rebounds]
+end

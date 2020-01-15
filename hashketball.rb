@@ -195,5 +195,6 @@ def player_stats(player_name)
       player[:player_name] == player_name
     }
   }
+  # [0]
   # ho.select{ |k, v| k.to_s != "player_name"}
 end

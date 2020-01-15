@@ -190,11 +190,8 @@ end
 
 def player_stats(player_name)
   game_hash.map{ |k, v|
-    v[:players].first { |player|
-      if player[:player_name] == player_name
-        
-        break
-      end
+    v[:players].find { |player|
+      player[:player_name] == player_name
     }
   }
   result

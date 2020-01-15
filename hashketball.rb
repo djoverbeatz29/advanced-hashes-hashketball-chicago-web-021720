@@ -204,5 +204,5 @@ def most_points_scored
 end
 
 def winning_team
- game_hash.sum{ |k, v| v[:points]}
+ game_hash.map{ |k, v| v[:players]}.sum{ |player| player[:points] }
 end

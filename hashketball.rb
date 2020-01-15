@@ -212,3 +212,6 @@ end
 def player_with_longest_name
   game_hash.map{ |k, v| v[:players]}.flatten.map{ |p| p[:player_name]}.max_by{ |p| p.length}
 end
+
+def long_name_steals_a_ton
+  

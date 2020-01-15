@@ -189,9 +189,10 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  game_hash.map{ |k, v|
+  ho = game_hash.map{ |k, v|
     v[:players].find { |player|
       player[:player_name] == player_name
     }
-  }[0].select{ |k, v| k.to_s != "player_name"}
+  }[0]
+  ho.select{ |k, v| k.to_s != "player_name"}
 end

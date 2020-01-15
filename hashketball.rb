@@ -189,11 +189,10 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  result = nil
-  game_hash.each{ |k, v|
-    v[:players].each { |player|
+  game_hash.map{ |k, v|
+    v[:players].first { |player|
       if player[:player_name] == player_name
-        result = player
+        
         break
       end
     }

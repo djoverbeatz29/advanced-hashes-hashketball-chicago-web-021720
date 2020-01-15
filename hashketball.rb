@@ -208,3 +208,7 @@ def winning_team
   total_scores = game_hash.map{ |k, v| v[:players].sum{ |p| p[:points] }}
   names[total_scores.each_with_index.max[1]]
 end
+
+def player_with_longest_name
+ game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:shoe] }[:name]
+end

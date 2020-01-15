@@ -194,5 +194,5 @@ def player_stats(player_name)
       player[:player_name] == player_name
     }
   }
-  result
+  
 end

@@ -202,3 +202,7 @@ end
 def most_points_scored
  game_hash.map{ |k, v| v[:players]}.flatten.max_by{ |player| player[:points] }[:player_name]
 end
+
+def winning_team
+ game_hash.sum{ |k, v| v[:points]}
+end
